@@ -1,12 +1,13 @@
+
 @import "tailwindcss";
 
-/* ✅ Tailwind v4 uses @theme for design tokens */
+/* ✅ Tailwind v4 design tokens */
 @theme {
-  /* Font families */
+  /* Fonts */
   --font-heading: "Space Grotesk", sans-serif;
   --font-body: "Inter", sans-serif;
 
-  /* Minimalist theme (default) */
+  /* Core color tokens (your system) */
   --color-bg: #ffffff;
   --color-text: #111827;
   --color-accent: #2563eb;
@@ -14,32 +15,86 @@
   /* Sizes */
   --container-width: 1280px;
   --radius-xl: 1rem;
+
+  /* Mirror shadcn vars (so Tailwind utilities like bg-primary, bg-accent work) */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
 }
 
-/* ✅ Vibrant theme */
+/* ========================= */
+/* 🔗 Default (root) mapping */
+/* ========================= */
+:root {
+  /* Your tokens */
+  --color-bg: #ffffff;
+  --color-text: #111827;
+  --color-accent: #2563eb;
+
+  /* Map shadcn vars → your tokens */
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+  --primary: var(--color-accent);
+  --primary-foreground: #ffffff;
+  --accent: var(--color-accent);
+  --accent-foreground: #ffffff;
+}
+
+/* ========================= */
+/* 🔗 Theme Variants          */
+/* ========================= */
+
+/* Vibrant theme */
 [data-theme="vibrant"] {
   --color-bg: #0f172a;
   --color-text: #f9fafb;
   --color-accent: #8b5cf6;
+
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+  --primary: var(--color-accent);
+  --primary-foreground: #ffffff;
+  --accent: var(--color-accent);
+  --accent-foreground: #ffffff;
 }
 
-/* ✅ Pastel theme */
+/* Pastel theme */
 [data-theme="pastel"] {
   --color-bg: #ffe4e6;
   --color-text: #1f2937;
   --color-accent: #a7f3d0;
+
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+  --primary: var(--color-accent);
+  --primary-foreground: #1f2937;
+  --accent: var(--color-accent);
+  --accent-foreground: #1f2937;
 }
 
-/* ✅ Dark Neon theme */
+/* Dark Neon theme */
 [data-theme="darkneon"] {
   --color-bg: #0f172a;
   --color-text: #f1f5f9;
   --color-accent: #06b6d4;
+
+  --background: var(--color-bg);
+  --foreground: var(--color-text);
+  --primary: var(--color-accent);
+  --primary-foreground: #0f172a;
+  --accent: var(--color-accent);
+  --accent-foreground: #0f172a;
 }
 
-/* Apply defaults */
+/* ========================= */
+/* Base styles               */
+/* ========================= */
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
 }
+

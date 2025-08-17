@@ -1,3 +1,5 @@
+import { Button } from "../ui/button";
+
 export function SassHeader() {
   return (
     <header className="flex justify-between items-center py-4 px-6">
@@ -13,9 +15,7 @@ export function SassHeader() {
           Contact
         </a>
       </nav>
-      <button className="ml-4 px-4 py-2 rounded-xl bg-[var(--accent)] text-white">
-        Started
-      </button>
+      <Button>Get Started</Button>
     </header>
   );
 }
