@@ -20,8 +20,7 @@ npm run dev
 
 
 🖼️ Demo
-
-👉 Live Demo on Vercel
+👉 [https://launchpad-ui-xi.vercel.app/](Live Demo on Vercel)]
 
 📜 License
 
