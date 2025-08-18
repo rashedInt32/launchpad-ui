@@ -5,7 +5,7 @@ export function SassHero() {
   return (
     <section className="py-20 px-6 min-h-[50vh] items-center flex justify-center container mx-auto  md:flex-row-reverse gap-8 flex-wrap">
       <Image
-        src="/assets/sass-hero.svg"
+        src="/assets/saas-hero.svg"
         alt="Sass Hero Image"
         width={600}
         height={400}

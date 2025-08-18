@@ -1,1 +1,1 @@
-export { SassHero } from "./sass-hero";
+export { SassHero } from "./saas-hero";
