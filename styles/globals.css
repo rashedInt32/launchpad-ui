@@ -10,7 +10,8 @@
   /* Core color tokens (your system) */
   --color-bg: #ffffff;
   --color-text: #111827;
-  --color-accent: #2563eb;
+  --color-accent: #0E2E28;
+  --color-lemon: #CDFA8A;
 
   /* Sizes */
   --container-width: 1280px;
@@ -32,7 +33,8 @@
   /* Your tokens */
   --color-bg: #ffffff;
   --color-text: #111827;
-  --color-accent: #2563eb;
+  --color-accent: #0E2E28;
+  --color-lemon: #CDFA8A;
 
   /* Map shadcn vars → your tokens */
   --background: var(--color-bg);
@@ -40,7 +42,8 @@
   --primary: var(--color-accent);
   --primary-foreground: #ffffff;
   --accent: var(--color-accent);
-  --accent-foreground: #ffffff;
+  --lemon: var(--color-lemon);
+  --accent-foreground: var(--color-lemon);
 }
 
 /* ========================= */
