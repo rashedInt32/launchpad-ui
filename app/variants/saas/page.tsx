@@ -2,6 +2,7 @@ import { SassHeader } from "@/components/headers";
 import { SassHero } from "@/components/heroes";
 import { SaasPricing } from "@/components/pricing";
 import { SassFeatures } from "@/components/sections";
+import { SaasFooter } from "@/components/footers";
 
 export default function SassLanding() {
   return (
@@ -10,6 +11,7 @@ export default function SassLanding() {
       <SassHero />
       <SassFeatures />
       <SaasPricing />
+      <SaasFooter />
     </div>
   );
 }
