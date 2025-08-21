@@ -13,7 +13,7 @@ export function SassHeader() {
   }, []);
 
   return (
-    <header className="py-4 fixed top-0 left-0 z-50 w-full mx-auto">
+    <header className="py-2 fixed top-0 left-0 z-50 w-full mx-auto">
       <div
         className={`mx-auto flex items-center justify-between transition-all duration-500 ease-in-out transform  ${
           scrolled
