@@ -3,8 +3,8 @@ import { Button } from "../ui/button";
 
 export function SassHero() {
   return (
-    <section className="pt-10 lg:pt-20 px-6 items-center flex-col flex justify-center gap-2 flex-wrap mt-18 lg:mt-24 bg-gradient-to-t from-white to-blue-200 rounded-lg mx-3 lg:mx-6">
-      <h1 className="text-2xl lg:text-7xl font-heading font-extrabold mb-4 text-center text-[var(--text)]">
+    <section className="pt-10 lg:pt-20 px-6 items-center flex-col flex justify-center gap-2 flex-wrap mt-18 lg:mt-18 bg-gradient-to-t from-white to-blue-200 rounded-lg mx-3 lg:mx-10">
+      <h1 className="text-2xl lg:text-7xl font-heading font-extrabold mb-4 text-center text-[var(--text)] tracking-tighter">
         Precision Finance at <br />{" "}
         <span className="text-[var(--accent)]">You FingerTips</span>
       </h1>
@@ -14,7 +14,7 @@ export function SassHero() {
       </p>
       <div className="flex gap-4 itemx-center justify-center flex-wrap">
         <Button variant="defaultRounded">View Templates</Button>
-        <Button variant="outlineRounded" asChild>
+        <Button variant="outlineRounded" asChild className="bg-white py-5">
           <a
             href="https://github.com/rashedInt32/launchpad-ui"
             target="_blank"
