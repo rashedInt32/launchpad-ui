@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Button } from "../ui/button";
 
-export function SassHero() {
+export function SaasHero() {
   return (
     <section className="pt-10 lg:pt-20 px-6 items-center flex-col flex justify-center gap-2 flex-wrap mt-18 lg:mt-18 bg-gradient-to-t from-white to-blue-200 rounded-lg mx-3 lg:mx-10">
       <h1 className="text-2xl lg:text-7xl font-heading font-extrabold mb-4 text-center text-[var(--text)] tracking-tighter">
@@ -27,7 +27,7 @@ export function SassHero() {
       <div className="w-full lg:px-20 pt-12">
         <Image
           src="/assets/saas/saas-hero.png"
-          alt="Sass Hero Image"
+          alt="Saas Hero Image"
           width={900}
           height={400}
           className="flex-1 w-full rounded-lg"

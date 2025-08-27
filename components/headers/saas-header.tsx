@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
 
-export function SassHeader() {
+export function SaasHeader() {
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {

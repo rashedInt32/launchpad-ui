@@ -1,1 +1,1 @@
-export { SassFeatures } from "./saas-features";
+export { SaasFeatures } from "./saas-features";

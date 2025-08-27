@@ -1,17 +1,17 @@
-import { SassHeader } from "@/components/headers";
-import { SassHero } from "@/components/heroes";
+import { SaasHeader } from "@/components/headers";
+import { SaasHero } from "@/components/heroes";
 import { SaasPricing } from "@/components/pricing";
-import { SassFeatures } from "@/components/sections";
+import { SaasFeatures } from "@/components/sections";
 import { SaasFooter } from "@/components/footers";
 import SocialProof from "@/components/sections/saas-socials";
 
-export default function SassLanding() {
+export default function SaasLanding() {
   return (
     <div>
-      <SassHeader />
-      <SassHero />
+      <SaasHeader />
+      <SaasHero />
       <SocialProof />
-      <SassFeatures />
+      <SaasFeatures />
       <SaasPricing />
       <SaasFooter />
     </div>

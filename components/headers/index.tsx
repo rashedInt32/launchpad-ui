@@ -1,1 +1,1 @@
-export { SassHeader } from "./saas-header";
+export { SaasHeader } from "./saas-header";
