@@ -31,7 +31,6 @@ export default function SocialProof() {
       <div className="max-w-6xl mx-auto px-6 text-center">
         <Title
           text="Trusted by over 5000+ Companies worldwide"
-          isBreak={true}
           breakText="Companies worldwide"
         />
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-center">
