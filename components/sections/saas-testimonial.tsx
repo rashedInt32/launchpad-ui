@@ -41,8 +41,8 @@ export const SaasTestimonial = () => {
   };
 
   return (
-    <div className="flex items-center justify-center min-h-screen bg-gray-50 p-4 font-inter">
-      <div className="relative w-full max-w-2xl bg-white shadow-xl rounded-2xl p-6 md:p-10 flex flex-col items-center">
+    <div className="flex items-center justify-center  bg-gray-50 p-4 py-20 font-inter">
+      <div className="relative w-full max-w-5xl bg-white shadow-md rounded-2xl p-6 md:p-10 flex flex-col items-center">
         <div className="relative w-full overflow-hidden">
           <div
             className="flex transition-transform duration-500 ease-in-out"
@@ -61,7 +61,9 @@ export const SaasTestimonial = () => {
                   <img
                     src={testimonial.image}
                     alt={testimonial.name}
-                    className="w-20 h-20 rounded-full border-4 border-white shadow-lg"
+                    width={80}
+                    height={80}
+                    className="w-16 h-16 rounded-full border-4 border-white shadow-lg"
                   />
                   <p className="mt-4 font-semibold text-lg text-gray-900">
                     {testimonial.name}
