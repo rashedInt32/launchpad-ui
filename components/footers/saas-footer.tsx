@@ -114,7 +114,7 @@ export const SaasFooter = () => {
               </li>
               <li>
                 <Link href="/careers" className="hover:text-gray-900">
-                  Careers{" "}
+                  Careers
                   <span className="bg-blue-100 text-blue-800 text-xs font-medium ml-2 px-2.5 py-0.5 rounded-full">
                     Hiring
                   </span>
