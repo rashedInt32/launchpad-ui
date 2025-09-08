@@ -54,7 +54,7 @@ export const SaasTestimonial = () => {
                 className="w-full flex-shrink-0 text-center flex flex-col items-center"
               >
                 <p className="text-gray-700 text-lg md:text-xl italic font-light leading-relaxed">
-                  "{testimonial.quote}"
+                  &quote{testimonial.quote}&quote
                 </p>
 
                 <div className="mt-8 flex flex-col items-center">
