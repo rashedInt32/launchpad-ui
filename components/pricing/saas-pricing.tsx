@@ -11,7 +11,7 @@ const plans = [
       "MIT License",
       "Community support",
     ],
-    color: "bg-blue-600",
+    color: "bg-[var(--color-accent)]",
   },
   {
     plan: "Premium",
@@ -39,7 +39,7 @@ const plans = [
 
 export function SaasPricing() {
   return (
-    <section id="pricing" className="py-20 px-6 bg-gray-50">
+    <section id="pricing" className="py-20 px-6 bg-white">
       <h2 className="text-3xl font-heading font-bold text-center mb-12">
         Pricing
       </h2>
@@ -63,12 +63,19 @@ export function SaasPricing() {
             <ul className="space-y-4 text-gray-600 p-10">
               {p.features.map((f) => (
                 <li key={f} className="flex items-start gap-3">
-                  <CheckCircle size={24} className="text-green-600" /> {f}
+                  <CheckCircle
+                    size={24}
+                    className="text-[var(--color-accent)]"
+                  />{" "}
+                  {f}
                 </li>
               ))}
             </ul>
             <div className="px-10 pb-8">
-              <Button variant="outline" className="w-full cursor-pointer">
+              <Button
+                variant="outlineRounded"
+                className="w-full cursor-pointer"
+              >
                 Choose Plan
               </Button>
             </div>
