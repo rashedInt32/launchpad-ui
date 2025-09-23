@@ -6,10 +6,10 @@ import { useGsapSequenceAnimation } from "@/hooks/useGsapAnimation";
 
 export function SaasHero() {
   const heroRef = useGsapSequenceAnimation([
-    { preset: 'fadeInUp', delay: 0.1 },
-    { preset: 'fadeInUp', delay: 0.2 },
-    { preset: 'fadeInUp', delay: 0.3 },
-    { preset: 'scaleIn', delay: 0.1 }
+    { preset: "fadeInUp", delay: 0.0 },
+    { preset: "fadeInUp", delay: 0.0 },
+    { preset: "fadeInUp", delay: 0.0 },
+    { preset: "scaleIn", delay: 0.0 },
   ]);
 
   return (

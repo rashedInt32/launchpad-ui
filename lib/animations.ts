@@ -68,10 +68,10 @@ export interface AnimationConfig {
   once?: boolean;
 }
 
-// Default intersection observer options - Optimized for faster triggering
+// Default intersection observer options - Conservative triggering to avoid conflicts
 export const defaultIntersectionOptions: IntersectionObserverInit = {
-  threshold: 0.15,
-  rootMargin: '0px 0px -20px 0px'
+  threshold: 0.1,
+  rootMargin: '0px 0px 0px 0px'
 };
 
 // Utility to create GSAP timeline with ScrollTrigger
