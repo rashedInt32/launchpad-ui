@@ -1,6 +1,7 @@
 "use client";
 
 import { Title } from "../ui/title";
+import { useGsapStaggerAnimation } from "@/hooks/useGsapAnimation";
 
 export default function SocialProof() {
   const brands = [
@@ -26,14 +27,23 @@ export default function SocialProof() {
     },
   ];
 
+  const titleRef = useGsapStaggerAnimation({ preset: 'fadeInUp' });
+  const logosRef = useGsapStaggerAnimation({
+    preset: 'staggerFadeIn',
+    delay: 0.2,
+    stagger: 0.06
+  });
+
   return (
     <section className="py-16 ">
       <div className="max-w-6xl mx-auto px-6 text-center">
-        <Title
-          text="Trusted by over 5000+ Companies worldwide"
-          breakText="Companies worldwide"
-        />
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-center">
+        <div ref={titleRef}>
+          <Title
+            text="Trusted by over 5000+ Companies worldwide"
+            breakText="Companies worldwide"
+          />
+        </div>
+        <div ref={logosRef} className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-8 items-center justify-center">
           {brands.map((brand) => (
             <div key={brand.name} className="flex items-center justify-center">
               <img

@@ -1,5 +1,8 @@
+"use client";
+
 import { Shield, Cloud, Layers, BarChart, Bell, Settings } from "lucide-react";
 import { Title } from "../ui/title";
+import { useGsapStaggerAnimation } from "@/hooks/useGsapAnimation";
 
 export const SaasFeatures = () => {
   const services = [
@@ -41,10 +44,17 @@ export const SaasFeatures = () => {
     },
   ];
 
+  const titleRef = useGsapStaggerAnimation({ preset: 'fadeInUp' });
+  const featuresRef = useGsapStaggerAnimation({
+    preset: 'staggerFadeIn',
+    delay: 0.2,
+    stagger: 0.08
+  });
+
   return (
     <div className="bg-white py-16 sm:py-24 font-sans text-gray-800">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="lg:text-center">
+        <div ref={titleRef} className="lg:text-center">
           <Title
             text="Scale your Business"
             colorText="Business"
@@ -52,7 +62,7 @@ export const SaasFeatures = () => {
           />
         </div>
 
-        <div className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div ref={featuresRef} className="mt-16 grid grid-cols-1 gap-8 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
             <div
               key={index}
