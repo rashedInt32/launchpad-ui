@@ -1,10 +1,16 @@
 "use client";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "../ui/button";
 import Image from "next/image";
+import { useGsapAnimation } from "@/hooks/useGsapAnimation";
 
 export function SaasHeader() {
   const [scrolled, setScrolled] = useState(false);
+  const headerRef = useGsapAnimation({
+    preset: 'fadeInDown',
+    delay: 0.1,
+    triggerOnMount: true
+  });
 
   useEffect(() => {
     const onScroll = () => setScrolled(window.scrollY > 0);
@@ -13,7 +19,7 @@ export function SaasHeader() {
   }, []);
 
   return (
-    <header className="py-2 fixed top-0 left-0 z-50 w-full mx-auto">
+    <header ref={headerRef} className="py-2 fixed top-0 left-0 z-50 w-full mx-auto">
       <div
         className={`mx-auto flex items-center justify-between transition-all duration-500 ease-in-out transform  ${
           scrolled
