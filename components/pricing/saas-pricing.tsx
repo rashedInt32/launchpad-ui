@@ -1,5 +1,8 @@
+"use client";
+
 import { CheckCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useGsapStaggerAnimation } from "@/hooks/useGsapAnimation";
 
 const plans = [
   {
@@ -38,12 +41,21 @@ const plans = [
 ];
 
 export function SaasPricing() {
+  const titleRef = useGsapStaggerAnimation({ preset: 'fadeInUp' });
+  const pricingRef = useGsapStaggerAnimation({
+    preset: 'staggerFadeIn',
+    delay: 0.2,
+    stagger: 0.1
+  });
+
   return (
     <section id="pricing" className="py-20 px-6 bg-white">
-      <h2 className="text-3xl font-heading font-bold text-center mb-12">
-        Pricing
-      </h2>
-      <div className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+      <div ref={titleRef}>
+        <h2 className="text-3xl font-heading font-bold text-center mb-12">
+          Pricing
+        </h2>
+      </div>
+      <div ref={pricingRef} className="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
         {plans.map((p) => (
           <div
             key={p.plan}

@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useGsapAnimation } from "@/hooks/useGsapAnimation";
 
 export const SaasTestimonial = () => {
   const testimonials = [
@@ -28,6 +29,11 @@ export const SaasTestimonial = () => {
 
   const [currentTestimonial, setCurrentTestimonial] = useState(0);
 
+  const testimonialRef = useGsapAnimation({
+    preset: 'slideUp',
+    delay: 0.1
+  });
+
   const handleNext = () => {
     setCurrentTestimonial((prev) =>
       prev === testimonials.length - 1 ? 0 : prev + 1,
@@ -42,7 +48,10 @@ export const SaasTestimonial = () => {
 
   return (
     <div className="flex items-center justify-center  bg-gray-50 p-4 py-20 font-inter">
-      <div className="relative w-full max-w-5xl bg-white shadow-md rounded-2xl p-6 md:p-10 flex flex-col items-center">
+      <div
+        ref={testimonialRef}
+        className="relative w-full max-w-5xl bg-white shadow-md rounded-2xl p-6 md:p-10 flex flex-col items-center"
+      >
         <div className="relative w-full overflow-hidden">
           <div
             className="flex transition-transform duration-500 ease-in-out"
