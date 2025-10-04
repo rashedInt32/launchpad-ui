@@ -7,9 +7,9 @@ import { useGsapAnimation } from "@/hooks/useGsapAnimation";
 export function SaasHeader() {
   const [scrolled, setScrolled] = useState(false);
   const headerRef = useGsapAnimation({
-    preset: 'fadeInDown',
+    preset: "fadeInDown",
     delay: 0.1,
-    triggerOnMount: true
+    triggerOnMount: true,
   });
 
   useEffect(() => {
@@ -19,11 +19,14 @@ export function SaasHeader() {
   }, []);
 
   return (
-    <header ref={headerRef} className="py-2 fixed top-0 left-0 z-50 w-full mx-auto">
+    <header
+      ref={headerRef}
+      className="py-2 fixed top-0 left-0 z-50 w-full mx-auto"
+    >
       <div
         className={`mx-auto flex items-center justify-between transition-all duration-500 ease-in-out transform  ${
           scrolled
-            ? " px-10 md:px-4 py-2 bg-white/5 backdrop-blur-lg rounded-full border border-black/5 max-w-5xl"
+            ? " px-10 md:px-4 py-2 bg-white/5 backdrop-blur-lg rounded-full border border-black/5 max-w-6xl"
             : "px-4 md:px-10 py-2 max-w-full border-transparent"
         }`}
       >
