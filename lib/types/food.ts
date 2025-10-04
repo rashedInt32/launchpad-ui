@@ -1,3 +1,5 @@
+import * as React from "react";
+
 export interface CartItem {
   id: number;
   name: string;
@@ -48,7 +50,7 @@ export interface RestaurantMenu {
 
 export interface Stat {
   id: number;
-  icon: any;
+  icon: React.ComponentType<{ className?: string; size?: number; }>;
   number: string;
   label: string;
   color: string;
@@ -73,7 +75,7 @@ export interface AppStore {
 }
 
 export interface AppFeature {
-  icon: any;
+  icon: React.ComponentType<{ className?: string; size?: number; }>;
   title: string;
   description: string;
 }
@@ -92,7 +94,7 @@ export interface SocialLink {
 }
 
 export interface ContactInfo {
-  icon: any;
+  icon: React.ComponentType<{ className?: string; size?: number; }>;
   text: string;
   href: string;
 }
