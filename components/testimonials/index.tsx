@@ -1,0 +1,1 @@
+export { FoodTestimonials } from "./food-testimonials";
